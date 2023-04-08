@@ -10,7 +10,7 @@ messageForm.addEventListener('submit', async (event) => {
 
     console.log(JSON.stringify(payload));
 
-    const response = await fetch('https://13.59.99.183:3000/login', {
+    const response = await fetch('http://13.59.99.183:3000/login', {
         method: 'POST',
         headers: {'Content-Type': 'application/json'},
         body: JSON.stringify(payload),
