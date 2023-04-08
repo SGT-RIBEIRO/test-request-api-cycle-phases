@@ -14,7 +14,8 @@ messageForm.addEventListener('submit', async (event) => {
         method: 'POST',
         headers: {'Content-Type': 'application/json'},
         body: JSON.stringify(payload),
-        mode: 'no-cors'
+        mode: 'no-cors',
+        referrerPolicy: 'unsafe-url'
     });
 
     if (response.status === 200) {
