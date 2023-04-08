@@ -10,25 +10,25 @@ messageForm.addEventListener('submit', async (event) => {
 
     console.log(JSON.stringify(payload));
     
-     let xhr = new XMLHttpRequest();
+//      let xhr = new XMLHttpRequest();
 
-    xhr.open("POST", "https://13.59.99.183:3000/login")
-    xhr.setRequestHeader('Content-type', 'application/json; charset=utf-8');
-    xhr.send(JSON.stringify(payload))
+//     xhr.open("POST", "https://13.59.99.183:3000/login")
+//     xhr.setRequestHeader('Content-type', 'application/json; charset=utf-8');
+//     xhr.send(JSON.stringify(payload))
 
-//     const response = await fetch('https://13.59.99.183:3000/login', {
-//         method: 'POST',
-//         headers: {'Content-Type': 'application/json'},
-//         body: JSON.stringify(payload),
-//         mode: 'cors'
-//     });
+    const response = await fetch('https://13.59.99.183:3000/login', {
+        method: 'POST',
+        headers: {'Content-Type': 'application/json'},
+        body: JSON.stringify(payload),
+        mode: 'cors'
+    });
 
-//     if (response.status === 200) {
-//         const data = await response.json();
-//         alert(
-//             "Login realizado com sucesso!"
-//         );
-//     }
+    if (response.status === 200) {
+        const data = await response.json();
+        alert(
+            "Login realizado com sucesso!"
+        );
+    }
 });
 
 
