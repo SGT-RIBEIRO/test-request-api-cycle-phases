@@ -16,7 +16,7 @@ messageForm.addEventListener('submit', async (event) => {
 //     xhr.setRequestHeader('Content-type', 'application/json; charset=utf-8');
 //     xhr.send(JSON.stringify(payload))
 
-    const response = await fetch('https://13.59.99.183:3000/login', {
+    const response = await fetch('https://63qx8ubepf.execute-api.us-east-2.amazonaws.com/login', {
         method: 'POST',
         headers: {'Content-Type': 'application/json'},
         body: JSON.stringify(payload),
