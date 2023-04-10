@@ -20,11 +20,13 @@ messageForm.addEventListener('submit', async (event) => {
         method: 'POST',
         headers: {'Content-Type': 'application/json'},
         body: JSON.stringify(payload),
+        credentials: 'include',
         mode: 'cors'
     });
 
     if (response.status === 200) {
         const data = await response.json();
+        console.log("COOKIE: ", document.cookie)
         alert(
             "Login realizado com sucesso!"
         );
