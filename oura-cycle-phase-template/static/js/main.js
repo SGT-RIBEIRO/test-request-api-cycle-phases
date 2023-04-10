@@ -26,7 +26,7 @@ messageForm.addEventListener('submit', async (event) => {
 
     if (response.status === 200) {
         const data = await response.json();
-        console.log("COOKIE: ", document.cookie)
+        console.log("DATA: ", data)
         alert(
             "Login realizado com sucesso!"
         );
